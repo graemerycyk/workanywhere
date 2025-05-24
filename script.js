@@ -1,12 +1,14 @@
 // script.js
 
-// Example: Toggle mobile menu
+// Example: Toggle mobile menu (with null checks)
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
 
-menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('hidden');
-});
+if (menuToggle && menu) {
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+}
 
 // Insert current year in footer
 document.addEventListener('DOMContentLoaded', () => {
